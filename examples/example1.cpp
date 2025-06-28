@@ -3,8 +3,8 @@
 #include <filesystem>
 
 int main() {
-    RaiiFile file("../test_files/incorrect_extension.bibabobo", FileMode::WriteLine);
     try {
+        RaiiFile file("../test_files/incorrect_extension.bibabobo", FileMode::WriteLine);
         file.writeLine("Хороший анекдот!");
         file.writeLine("Мне нравится этот анекдот!");
     } catch (const std::exception& e) {
