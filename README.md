@@ -10,4 +10,5 @@ mkdir build
 cmake .. 
 make
 ```
-Далее в папке build будет example1, example2, example3 исполняемых файла
+
+В папке build будут example1, example2, example3 - исполняемые модули, которые можно позапускать и посмотреть, как работает программа.
