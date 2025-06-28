@@ -14,6 +14,6 @@ class RaiiFile {
     public:
         RaiiFile(const fs::path& path, FileMode mode);
         const std::string& readLine(size_t lineNumber);
-        void writeLine(const std::string &inputLine);
+        void writeLine(const std::string& inputLine);
         ~RaiiFile();
 };
