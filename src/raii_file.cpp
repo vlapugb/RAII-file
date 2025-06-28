@@ -24,7 +24,7 @@ RaiiFile::RaiiFile(const fs::path& path, FileMode mode) {
         }
 }
 
-std::string RaiiFile::readLine(size_t lineNumber)
+const std::string& RaiiFile::readLine(size_t lineNumber)
 {
     fileStream.clear();
     fileStream.seekg(0);

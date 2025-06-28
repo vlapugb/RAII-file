@@ -13,7 +13,7 @@ class RaiiFile {
         std::fstream fileStream;
     public:
         RaiiFile(const fs::path& path, FileMode mode);
-        std::string readLine(size_t lineNumber);
+        const std::string& readLine(size_t lineNumber);
         void writeLine(const std::string &inputLine);
         ~RaiiFile();
 };
