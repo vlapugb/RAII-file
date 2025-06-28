@@ -11,9 +11,9 @@ RaiiFile file("../test_files/1.txt", FileMode::WriteLine);
         std::cerr << "Error writing to file: " << e.what() << std::endl;
     }
 
-    RaiiFile readFile("example.txt", FileMode::ReadLine);
+    RaiiFile readFile("../test_files/1.txt", FileMode::ReadLine);
     try {
-        std::cout << "First line: " << readFile.readLine(66) << std::endl;
+        std::cout << "First line: " << readFile.readLine(62) << std::endl;
         std::cout << "Second line: " << readFile.readLine(67) << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Error reading from file: " << e.what() << std::endl;
