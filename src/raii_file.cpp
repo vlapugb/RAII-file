@@ -1,7 +1,9 @@
 #include "raii_file.hpp"
-
+#include <vector>
+#include <algorithm>
 
 RaiiFile::RaiiFile(const fs::path& path, FileMode mode) {
+    std::vector<std::string> allowed = {".txt", ".cfg", ".log"};
     std::string fileExt = static_cast<std::string>(path.extension());
     switch (mode)
         {
@@ -17,7 +19,7 @@ RaiiFile::RaiiFile(const fs::path& path, FileMode mode) {
         if (!fileStream.is_open()) {
             throw std::runtime_error("Failed to open file: " + path.string());
         }
-        if (fileExt != ".txt") {
+        if (std::find(allowed.begin(), allowed.end(), fileExt) == allowed.end()) {
             throw std::invalid_argument("Invalid file extension: " + fileExt);
         }
 }
