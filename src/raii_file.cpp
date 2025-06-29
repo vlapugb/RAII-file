@@ -3,7 +3,6 @@
 #include <algorithm>
 
 RaiiFile::RaiiFile(const fs::path& path, FileMode mode) {
-    std::vector<std::string> allowed = {".txt", ".cfg", ".log"};
     std::string fileExt = static_cast<std::string>(path.extension());
     switch (mode)
         {

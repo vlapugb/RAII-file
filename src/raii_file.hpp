@@ -11,6 +11,7 @@ enum class FileMode {
 class RaiiFile {
     private:
         std::fstream fileStream;
+         std::vector<std::string> allowed = {".txt", ".cfg", ".log"};
     public:
         RaiiFile(const fs::path& path, FileMode mode);
         const std::string& readLine(size_t lineNumber);
